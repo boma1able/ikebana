@@ -1,0 +1,15 @@
+.grid{
+  margin: 3px 0;
+  
+}
+.grid-item-content {
+  position: relative;
+  height: 279px;
+  background-color: #666666;
+  margin: 3px;
+}
+
+.grid-item-content--height2 { 
+  height: 564px; 
+}
+
