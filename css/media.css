@@ -51,10 +51,22 @@
   .grid-item-content--height2 {
     height: 731px;
   }
+  #main-menu{
+    display: block!important;
+  }
 }
 
 @media (min-width: 768px) {
   .logo-mob {
     display: none;
+  }
+  .bs-example-navbar-collapse-1{
+    width: 50px!important;
+  }
+  #main-menu{
+    display: inline-block!important;
+  }
+  .navbar-collapse.collapse{
+    height: 50px!important;
   }
 }

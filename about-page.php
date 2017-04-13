@@ -1,4 +1,4 @@
-<!--Template name: Contacts-->
+<!--Template name: about-->
 
 <?php get_header();?>
 
@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="contacts-page">
+            <div class="about-page">
                 <?php
                 while ( have_posts() ) : the_post();
 

@@ -47,8 +47,9 @@ function ikebana_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'ikebana' ),
-	) );
+//		'menu-2' => esc_html__( 'secondary', 'ikebana' ),
 
+	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -113,18 +114,26 @@ function ikebana_scripts() {
 	wp_enqueue_style( 'media-query', get_template_directory_uri() . '/css/media.css');
 	wp_enqueue_style( 'wow', get_template_directory_uri() . '/css/animate.css');
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+	wp_enqueue_style( 'font-slick', get_template_directory_uri() . '/css/slick.css');
+	wp_enqueue_style( 'font-slick-theme', get_template_directory_uri() . '/css/slick-theme.css');
 	wp_register_style( 'jquery', 'https://fonts.googleapis.com/css?family=Julius+Sans+One', '', '', false);
 	wp_register_style( 'jquery', 'https://fonts.googleapis.com/css?family=Raleway', '', '', false);
+	wp_enqueue_style( 'jquery-f', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css', array(), '20151215', false);
+	wp_enqueue_style( 'jquery' );
 	wp_enqueue_style( 'jquery' );
 
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
+	wp_register_script( 'jquery-fancy', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js');
 	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery-fancy' );
 	wp_enqueue_script( 'ikebana-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'ikebana-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'ikebana-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'ikebana-animate', get_template_directory_uri() . '/js/animate.js', array(), '20151215', true );
+	wp_enqueue_script( 'ikebana-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'ikebana-backontop', get_template_directory_uri() . '/js/backontop.js', array(), '20151215', true );
+	wp_enqueue_script( 'ikebana-myslick', get_template_directory_uri() . '/js/my-slick.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ikebana-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -162,7 +171,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
-
+// add active class menu
 function special_nav_class ($classes, $item) {
 	if (in_array('current-menu-item', $classes) ){
 		$classes[] = 'active ';
@@ -176,11 +185,11 @@ remove_filter( 'the_content', 'wpautop' );// для контента
 remove_filter( 'the_excerpt', 'wpautop' );// для анонсов
 remove_filter( 'comment_text', 'wpautop' );// для комментарий
 
-add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
-function add_search_box( $items, $args ) {
-	$items .= '<li>' . get_search_form( false ) . '</li>';
-	return $items;
-}
+//add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+//function add_search_box( $items, $args ) {
+//	$items .= '<li>' . get_search_form( false ) . '</li>';
+//	return $items;
+//}
 
 function new_excerpt_more($more) {
 	global $post;
@@ -188,3 +197,46 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+
+
+// register footer sidebar
+function ikebana_widget_footer_init(){
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 1',
+		'id' => 'footer-sidebar-1',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 2',
+		'id' => 'footer-sidebar-2',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 3',
+		'id' => 'footer-sidebar-3',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 4',
+		'id' => 'footer-sidebar-4',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+}
+
+add_action('widgets_init', 'ikebana_widget_footer_init');

@@ -5,28 +5,42 @@
 				<div class="top-foo">
 					<div class="col-xs-12 col-md-3">
 						<div class="about-foo">
-							<h3>About us</h3>
-							<p>Integer accumsan molestie diam, a posuere nisl faucibus ac. In vul putate consectetur mi, id consectetur purus sagittis eu.</p>
-							<p> 7 Corsham St., London, UK support[at]satoristudio.net
-							</p>
-							<p>+44 (0) 20 7731 3782</p>
+							<div id="footer-sidebar" class="secondary">
+								<div id="footer-sidebar1">
+									<?php
+									if(is_active_sidebar('footer-sidebar-1')){
+										dynamic_sidebar('footer-sidebar-1');
+									}
+									?>
+								</div>
+							</div>
+
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-3">
 						<div class="menu-foo">
-							<h3>Browse the Website</h3>
-							<ul>
-								<li><a href="">home</a></li>
-								<li><a href="">about</a></li>
-								<li><a href="">blog</a></li>
-								<li><a href="">contacts</a></li>
-							</ul>
+							<div id="footer-sidebar" class="secondary">
+								<div id="footer-sidebar1">
+									<?php
+									if(is_active_sidebar('footer-sidebar-2')){
+										dynamic_sidebar('footer-sidebar-2');
+									}
+									?>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-3">
 						<div class="widget-foo">
-							<h3>Text Widget</h3>
-							<p>Aliquam sed nisl leo. Cras vestibulum enim non lacus hendrerit dapibus. Donec a ligula tristique, molestie magna quis, tempus odio. Vivamus ut justo lacus. Donec id ornare purus. In hac habitasse platea dictumst. Duis sed cursus risus. Mauris accumsan pharetra lacus, at accumsan felis malesuada ac.</p>
+							<div id="footer-sidebar" class="secondary">
+								<div id="footer-sidebar1">
+									<?php
+									if(is_active_sidebar('footer-sidebar-3')){
+										dynamic_sidebar('footer-sidebar-3');
+									}
+									?>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-3">
@@ -68,6 +82,7 @@
 
 	});
 </script>
+
 </body>
 
 </html>

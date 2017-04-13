@@ -37,7 +37,7 @@
 			<div class="box4 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/2.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/slide3.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/slide3.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -147,7 +147,7 @@
 			<div class="box12 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/8.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/8.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/8.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -171,14 +171,18 @@
 		</div>
 		<div class="grid-item col-xs-12 col-sm-4 col-md-3">
 			<div class="box14 grid-item-content">
-				S L I D E R
+				<div class="sl">
+					<div class="wow fadeIn"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/slide2.jpg" alt=""></div>
+					<div class="wow fadeIn"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/slide1.jpg" alt=""></div>
+					<div class="wow fadeIn"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/slide3.jpg" alt=""></div>
+				</div>
 			</div>
 		</div>
 		<div class="grid-item col-xs-12 col-sm-4 col-md-6">
 			<div class="box15 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/10.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/10.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/10.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -232,7 +236,7 @@
 			<div class="box20 grid-item-content grid-item-content--height2">
 				<div class="wow fadeIn" data-wow-offset="300">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/13.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/13.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/13.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -266,7 +270,7 @@
 			<div class="box23 grid-item-content">
 				<div class="wow fadeIn" data-wow-delay=".2s">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/16.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/16.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/16.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -282,7 +286,7 @@
 			<div class="box25 grid-item-content grid-item-content--height2">
 				<div class="wow fadeIn" data-wow-offset="300">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/17.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/17.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/17.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -290,7 +294,7 @@
 			<div class="box26 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/18.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/18.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/18.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -298,7 +302,7 @@
 			<div class="box27 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/19.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/19.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/19.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -345,7 +349,7 @@
 			<div class="box31 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/21.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/21.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/21.jpg"></a>
 				</div>
 			</div>
 		</div>
@@ -353,13 +357,13 @@
 			<div class="box32 grid-item-content">
 				<div class="wow fadeIn" data-wow-offset="200" >
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/22.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/22.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/22.jpg"></a>
 				</div>
 			</div>
 		</div>
 		<div class="grid-item col-xs-12 col-sm-4 col-md-3">
 			<div class="box33 grid-item-content">
-				<p>Follow me on <a href="">github</a></p>
+				<p>Follow me on <a href="https://github.com/boma1able/ikebana/">github</a></p>
 				<div>
 					<i class="fa fa-smile-o" aria-hidden="true"></i>
 				</div>

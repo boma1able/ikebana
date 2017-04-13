@@ -54,17 +54,19 @@
 				'walker'          => '',
 			) );
 			?>
+			<div class="right-nav">
+				<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>" class="navbar-form">
+					<div class="form-group">
+						<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" class="form-control" placeholder="Find...">
+					</div>
+				</form>
+				<ul class="socian-header">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
 
-<!--			<form class="navbar-form navbar-right">-->
-<!--				<div class="form-group">-->
-<!--					<input type="text" class="form-control" placeholder="Find...">-->
-<!--				</div>-->
-<!--			</form>-->
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-			</ul>
 		</div>
 	</div>
 </nav>
