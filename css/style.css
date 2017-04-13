@@ -196,7 +196,7 @@ a:hover {
   margin-bottom: 30px;
   padding: 50px 0 30px;
   font-family: 'Julius Sans One', sans-serif;
-  font-size: .7em;
+  font-size: .6em;
   border-bottom: 1px dotted #8e8e8e;
 }
 .info a{
@@ -285,6 +285,26 @@ a:hover {
   font-family: 'Julius Sans One', sans-serif;
   font-size: .8em;
 }
+
+/* archive page */
+.archive-page {
+  background-color: #666;
+  color: #fff;
+  margin: 6px 18px;
+  padding: 5%;
+}
+.archive-box{
+  background-color: #696969!important;
+  padding: 5px;
+}
+.arc-read-more-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: .6em;
+  color: #fff;
+}
+
 /* widget */
 .widget-area {
   padding: 10% 5%;

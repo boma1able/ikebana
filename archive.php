@@ -1,51 +1,40 @@
-<?php
-/**
- * The template for displaying archive pages
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package ikebana
- */
+<?php get_header();?>
 
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="archive-page">
+				<header class="page-header">
+					<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+					?>
+				</header>
+				<div class="grid">
+					<div class="grid-sizer col-xs-6 col-sm-4 col-md-3"></div>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+					<?php if ( have_posts() ) : $count = 0; while ( have_posts() )  : the_post(); $count++; ?>
+						<div class="grid-item col-xs-12 col-sm-4 col-md-3">
+							<div class="archive-box grid-item-content">
+								<div class="archive-post<?php if ($count % 2 == 0 ) echo ' two'; ?>">
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+									<a href="<?php get_permalink();?>"><h2><?php the_title(); ?></h2></a>
+									<div class="date">Date: <?php echo get_the_date($d, $post);?></div>
+									<div class="categories">Category: <?php echo the_category(', ');?></div>
+									<div class="author">Author: <?php the_author_posts_link();?></div>
 
-			endwhile;
+									<a class="arc-read-more-btn" href="<?php get_permalink();?>">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+					<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-			the_posts_navigation();
 
-		else :
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();?>
