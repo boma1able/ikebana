@@ -6,7 +6,7 @@
 		<div class="grid-item col-xs-12 col-sm-4 col-md-3">
 			<!-- add inner element for column content -->
 			<div class="box1 grid-item-content">
-				<h1 class="wow fadeInLeft">ikebana</h1>
+				<h1 class="wow fadeInLeft"><?php bloginfo();?></h1>
 			</div>
 		</div>
 		<div class="grid-item col-xs-12 col-sm-8 col-md-6">
@@ -18,7 +18,18 @@
 			<div class="box3 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/1.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
+
 				</div>
 			</div>
 		</div>
@@ -26,7 +37,7 @@
 			<div class="box4 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/2.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/2.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -34,7 +45,17 @@
 			<div class="wow zoomInUp box5 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/3.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 1);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -42,7 +63,17 @@
 			<div class="box6 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/4.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 2);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -62,7 +93,17 @@
 			<div class="box9 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-video"></div>
-					<a href=""><img class="img-responsive" src="img/5.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 3);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -70,7 +111,17 @@
 			<div class="box10 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/6.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 4);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'large', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -78,7 +129,17 @@
 			<div class="box11 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/7.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 5);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -86,7 +147,7 @@
 			<div class="box12 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/8.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/8.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -94,7 +155,17 @@
 			<div class="box13 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/9.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 6);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -107,7 +178,7 @@
 			<div class="box15 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/10.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/10.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -120,7 +191,17 @@
 			<div class="box17 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/11.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 7);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -128,7 +209,17 @@
 			<div class="box18 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/12.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 8);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -141,7 +232,7 @@
 			<div class="box20 grid-item-content grid-item-content--height2">
 				<div class="wow fadeIn" data-wow-offset="300">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/13.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/13.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -149,7 +240,17 @@
 			<div class="box21 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/14.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 9);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, array( 350, 279), array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -157,7 +258,7 @@
 			<div class="box22 grid-item-content">
 				<div class="wow fadeIn" data-wow-delay=".1s" >
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/15.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/15.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -165,7 +266,7 @@
 			<div class="box23 grid-item-content">
 				<div class="wow fadeIn" data-wow-delay=".2s">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/16.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/16.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -181,7 +282,7 @@
 			<div class="box25 grid-item-content grid-item-content--height2">
 				<div class="wow fadeIn" data-wow-offset="300">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/17.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/17.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -189,7 +290,7 @@
 			<div class="box26 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/18.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/18.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -197,7 +298,7 @@
 			<div class="box27 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/19.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/19.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -209,14 +310,34 @@
 		<div class="grid-item col-xs-12 col-sm-4 col-md-3">
 			<div class="box29 grid-item-content">
 				<div class="overlay-video"></div>
-				VIDEO
+				<?php
+				global $post;
+				$args = array('numberposts' => 1, 'offset' => 10);
+				$myposts = get_posts( $args );
+				foreach( $myposts as $post ){ setup_postdata($post);
+					?>
+					<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+					<?php
+				}
+				wp_reset_postdata();
+				?>
 			</div>
 		</div>
 		<div class="grid-item col-xs-12 col-sm-4 col-md-3">
 			<div class="box30 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-post"></div>
-					<a href=""><img class="img-responsive" src="img/20.jpg" alt="img"></a>
+					<?php
+					global $post;
+					$args = array('numberposts' => 1, 'offset' => 11);
+					$myposts = get_posts( $args );
+					foreach( $myposts as $post ){ setup_postdata($post);
+						?>
+						<a href="<?php echo get_permalink();?>"><?php echo get_the_post_thumbnail( $page->ID, 'medium', array('class' => 'img-responsive')); ?></a>
+						<?php
+					}
+					wp_reset_postdata();
+					?>
 				</div>
 			</div>
 		</div>
@@ -224,7 +345,7 @@
 			<div class="box31 grid-item-content">
 				<div class="wow fadeIn">
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/21.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/21.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>
@@ -232,7 +353,7 @@
 			<div class="box32 grid-item-content">
 				<div class="wow fadeIn" data-wow-offset="200" >
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="img/22.jpg" alt="img"></a>
+					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/22.jpg" alt="img"></a>
 				</div>
 			</div>
 		</div>

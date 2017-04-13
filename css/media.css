@@ -1,3 +1,5 @@
+/* height */
+
 @media (min-height: 1200px) {
   .grid-item-content {
     height: 279px;
@@ -6,9 +8,7 @@
     height: 564px;
   }
 }
-
-
-/* media width */
+/* width */
 
 @media (max-width: 1200px) {
   .navbar-form .form-group input {
@@ -19,6 +19,9 @@
   }
   .grid-item-content--height2 {
     height: 464px;
+  }
+  .box1 h1 {
+    line-height: 229px;
   }
 }
 

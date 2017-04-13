@@ -42,6 +42,28 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php ikebana_entry_footer(); ?>
+<!--		--><?php //ikebana_entry_footer(); ?>
+
+
+		<?php
+		$args = array(
+			'number'        => 0
+		,'offset'       => 0
+		,'orderby'      => 'id'
+		,'order'        => 'ASC'
+		,'hide_empty'   => true
+		,'fields'       => 'all'
+		,'slug'         => ''
+		,'hierarchical' => true
+		,'name__like'   => ''
+		,'pad_counts'   => false
+		,'get'          => ''
+		,'child_of'     => 0
+		,'parent'       => ''
+		);
+
+		$tags = get_tags($args);
+
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

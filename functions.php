@@ -7,6 +7,8 @@
  * @package ikebana
  */
 
+require get_template_directory() . '/tgm-plugin-activation/ikebana-tgm-plugin-activation.php';
+
 if ( ! function_exists( 'ikebana_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -105,23 +107,24 @@ add_action( 'widgets_init', 'ikebana_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ikebana_scripts() {
-	wp_enqueue_style( 'ikebana-style', get_stylesheet_uri() . '/js/bootstrap.css' );
-	wp_enqueue_style( 'ikebana-style', get_stylesheet_uri() . '/js/style.css' );
-	wp_enqueue_style( 'ikebana-style', get_stylesheet_uri() . '/js/animate.css' );
-	wp_enqueue_style( 'ikebana-style', get_stylesheet_uri() . '/js/grid.css' );
-	wp_enqueue_style( 'ikebana-style', get_stylesheet_uri() . '/js/media.css' );
-	wp_enqueue_style( 'ikebana-style', get_stylesheet_uri() . '/js/font-awesome.min.css' );
-	wp_enqueue_style( 'ikebana-style', 'https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet');
+	wp_enqueue_style( 'bootstrap-grid', get_template_directory_uri() . '/css/bootstrap.css');
+	wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css');
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css');
+	wp_enqueue_style( 'media-query', get_template_directory_uri() . '/css/media.css');
+	wp_enqueue_style( 'wow', get_template_directory_uri() . '/css/animate.css');
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+	wp_register_style( 'jquery', 'https://fonts.googleapis.com/css?family=Julius+Sans+One', '', '', false);
+	wp_register_style( 'jquery', 'https://fonts.googleapis.com/css?family=Raleway', '', '', false);
+	wp_enqueue_style( 'jquery' );
 
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'ikebana-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'ikebana-navigation', get_template_directory_uri() . '/js/bootstrap.min.js' );
-	wp_enqueue_script( 'ikebana-navigation', get_template_directory_uri() . '/js/npm.js' );
-	wp_enqueue_script( 'ikebana-navigation', get_template_directory_uri() . '/js/masonry.pkgd.min.js' );
-	wp_enqueue_script( 'ikebana-navigation', get_template_directory_uri() . '/js/animate.js' );
-	wp_enqueue_script( 'ikebana-navigation', get_template_directory_uri() . '/js/backontop.js' );
+	wp_enqueue_script( 'ikebana-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'ikebana-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'ikebana-animate', get_template_directory_uri() . '/js/animate.js', array(), '20151215', true );
+	wp_enqueue_script( 'ikebana-backontop', get_template_directory_uri() . '/js/backontop.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ikebana-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -155,3 +158,33 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+
+function special_nav_class ($classes, $item) {
+	if (in_array('current-menu-item', $classes) ){
+		$classes[] = 'active ';
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+
+remove_filter( 'the_content', 'wpautop' );// для контента
+remove_filter( 'the_excerpt', 'wpautop' );// для анонсов
+remove_filter( 'comment_text', 'wpautop' );// для комментарий
+
+add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+function add_search_box( $items, $args ) {
+	$items .= '<li>' . get_search_form( false ) . '</li>';
+	return $items;
+}
+
+function new_excerpt_more($more) {
+	global $post;
+	return '<a class="more_link" href="'. get_permalink($post->ID) . '"> Read more</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+

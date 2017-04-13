@@ -1,3 +1,6 @@
+* {
+  outline: none;
+}
 body {
   background-color: #444;
   font-family: 'Julius Sans One', sans-serif;
@@ -24,7 +27,7 @@ a:hover {
 }
 
 .box1 {
-  background-color: #68B942;
+  background-color: #68B942!important;
 }
 
 .box1 h1 {
@@ -96,6 +99,10 @@ a:hover {
   padding: 10% 5%;
 }
 
+.screen-reader-text {
+  display: none;
+}
+
 /* overlay */
 .overlay-post{
   position: absolute;
@@ -118,8 +125,178 @@ a:hover {
   height: 50px;
   right: 0;
 }
+/* single-page */
+.single-page{
+  margin: 10% 5% 0 5%;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+.single-page img{
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+}
+.single-page h1{
+  margin: 0 0 25px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #fff;
+}
+
+.post-navigation {
+  padding-bottom: 50px;
+  border-bottom: 1px dotted #8e8e8e;
+}
+
+.entry-meta{
+  padding-bottom: 15px;
+}
+.entry-meta .author {
+  float: none;
+}
+.nav-previous {
+  display: inline-block;
+}
+.nav-next {
+  display: inline-block;
+  float: right;
+}
+.entry-footer {
+  padding: 30px 0;
+}
+.navigation .post-navigation h2{
+  display: none;
+}
+  /* blog page*/
+
+.blog-page {
+  background-color: #666;
+  color: #8e8e8e;
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  margin: 6px 18px 0;
+}
+
+.blog-page h2 {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #fff;
+  margin: 0  0 15px;
+}
+
+.content {
+  margin: 10% 5% 0 5%;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+.content img{
+  margin-bottom: 20px;
+}
+.info {
+  display: block;
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 50px 0 30px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: .7em;
+  border-bottom: 1px dotted #8e8e8e;
+}
+.info a{
+  color: #fff;
+}
+.date, .author, .categories, .comments{
+  float: left;
+  padding-right: 40px;
+}
+
+/* contacts page */
+.contacts-page {
+  background-color: #666;
+  color: #8e8e8e;
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  margin: 6px 18px 0;
+}
 
 
+/* search result page */
+.result-page {
+  display: inline-block;
+  margin: 6px 18px;
+  color: #8e8e8e;
+  background-color: #666;
+}
+.result-page h1{
+  color: #fff;
+}
+.result-content {
+  padding: 5%;
+}
+
+/* comments area */
+.comments-area img{
+  width: 45px;
+  height: auto;
+}
+.comments-title {
+  margin: 50px 0 20px;
+
+}
+.comment-reply-title {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #fff;
+}
+.comment-form textarea{
+  padding: 12px;
+  width: 99%;
+  background-color: #555;
+  border: 1px solid #666;
+  font-size: .8em;
+}
+#email, #author {
+  width: 99%;
+  padding: 12px;
+  background-color: #555;
+  border: 1px solid #666;
+  font-size: .8em;
+}
+.comment-btn {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #fff;
+  background-color: #777;
+  border: 1px solid #666;
+  padding: 10px 20px;
+  font-size: .9em;
+}
+.commentlist {
+  padding: 0;
+  margin: 60px 0;
+  list-style-type: none;
+}
+.commentlist img{
+  width: 32px;
+  height: auto;
+}
+.commentlist ul {
+  list-style-type: none;
+}
+.comment-metadata a{
+  font-size: .6em;
+}
+.excerpt a{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: .8em;
+}
+/* widget */
+.widget-area {
+  padding: 10% 5%;
+}
+.widget-area h2{
+  margin: 40px 0 10px;
+}
+.widget-area ul{
+  list-style-type: none;
+  padding: 0;
+  line-height: 25px;
+}
 
 /* footer */
 
@@ -201,8 +378,10 @@ a:hover {
   margin-left: 18px;
   margin-top: 4px;
 }
-.logo-mob h1{
+.logo-mob a h1{
   font-size: 2em;
   margin: 0;
   padding: 9px 2px;
+  color: #8e8e8e;
 }
+
