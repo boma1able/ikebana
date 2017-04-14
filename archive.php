@@ -19,12 +19,11 @@
 							<div class="archive-box grid-item-content">
 								<div class="archive-post<?php if ($count % 2 == 0 ) echo ' two'; ?>">
 
-									<a href="<?php get_permalink();?>"><h2><?php the_title(); ?></h2></a>
-									<div class="date">Date: <?php echo get_the_date($d, $post);?></div>
-									<div class="categories">Category: <?php echo the_category(', ');?></div>
-									<div class="author">Author: <?php the_author_posts_link();?></div>
+									<?php get_template_part( 'template-parts/content', get_post_format() );?>
 
-									<a class="arc-read-more-btn" href="<?php get_permalink();?>">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+
+
+<!--									<a class="arc-read-more-btn" href="--><?php //get_permalink();?><!--">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>-->
 								</div>
 							</div>
 						</div>

@@ -21,6 +21,7 @@ get_header(); ?>
 								while ( have_posts() ) : the_post();
 
 									get_template_part( 'template-parts/content', get_post_format() );
+									the_content();
 
 									the_post_navigation( array(
 										'screen_reader_text' => '',

@@ -458,3 +458,20 @@ a:hover {
 .contact-form form imput[type="submit"]{
   border: 1px solid #000;
 }
+.entry-title {
+  color: #fff;
+}
+
+.wrap-forms input, .wrap-forms select{
+  padding: 12px;
+  background-color: #555;
+  border: 1px solid #666;
+  font-size: .8em;
+}
+.wrap-forms textarea{
+  padding: 12px;
+  width: 99%;
+  background-color: #555;
+  border: 1px solid #666;
+  font-size: .8em;
+}
