@@ -14,6 +14,7 @@
 					<div class="grid-sizer col-xs-6 col-sm-4 col-md-3"></div>
 
 					<?php if ( have_posts() ) : $count = 0; while ( have_posts() )  : the_post(); $count++; ?>
+
 						<div class="grid-item col-xs-12 col-sm-4 col-md-3">
 							<div class="archive-box grid-item-content">
 								<div class="archive-post<?php if ($count % 2 == 0 ) echo ' two'; ?>">
@@ -29,6 +30,10 @@
 						</div>
 					<?php endwhile; ?>
 					<?php endif; ?>
+
+
+
+
 				</div>
 			</div>
 		</div>

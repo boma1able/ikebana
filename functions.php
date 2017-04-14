@@ -120,7 +120,6 @@ function ikebana_scripts() {
 	wp_register_style( 'jquery', 'https://fonts.googleapis.com/css?family=Raleway', '', '', false);
 	wp_enqueue_style( 'jquery-f', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css', array(), '20151215', false);
 	wp_enqueue_style( 'jquery' );
-	wp_enqueue_style( 'jquery' );
 
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');

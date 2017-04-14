@@ -262,7 +262,7 @@
 			<div class="box22 grid-item-content">
 				<div class="wow fadeIn" data-wow-delay=".1s" >
 					<div class="overlay-photo"></div>
-					<a href=""><img class="img-responsive" src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/15.jpg" alt="img"></a>
+					<a data-fancybox="gallery" class="img-responsive" href="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/15.jpg"><img src="<?php echo home_url('/wp-content/themes/ikebana/', 'http');?>img/15.jpg"></a>
 				</div>
 			</div>
 		</div>
